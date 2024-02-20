@@ -13,6 +13,8 @@ namespace OpenBusDataAPI
 
         public LatLngBounds? Bounds { get; set; }
 
+        public IEnumerable<string>? OperatorRef { get; set; }
+
         protected override string BaseUrl => "data.bus-data.dft.gov.uk/api/v1/datafeed/";
 
         public override IList<KeyValuePair<string, string?>> GetQueryStringParameters()
@@ -24,6 +26,11 @@ namespace OpenBusDataAPI
             {
                 string latlngboundStr = $"{Bounds.Value.SouthWest.Lng},{Bounds.Value.SouthWest.Lat},{Bounds.Value.NorthEast.Lng},{Bounds.Value.NorthEast.Lat}";
                 parameters.Add("boundingBox", latlngboundStr);
+            }
+            if(OperatorRef != null)
+            {
+                string opRefStr = string.Join(",", OperatorRef);
+                parameters.Add("operatorRef", opRefStr);
             }
             return parameters;
         }
