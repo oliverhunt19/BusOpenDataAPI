@@ -1,0 +1,3 @@
+[submodule "OpenBusData/Submodules/FuelOptimisation"]
+	path = OpenBusData/Submodules/FuelOptimisation
+	url = https://github.com/oliverhunt19/FuelOptimisation.git

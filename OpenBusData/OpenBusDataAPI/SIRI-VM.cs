@@ -1,8 +1,8 @@
 ﻿namespace OpenBusDataAPI
 {
-    internal class SIRI_VM
+    public class SIRI_VM
     {
-
+        public ServiceDelivery ServiceDelivery { get; set; }
     }
 
     public class ServiceDelivery
