@@ -8,6 +8,7 @@ BusLocationRequest busLocationRequest = new BusLocationRequest()
 {
     Key = APIKey,
     Bounds = LatLngBounds.GetBoundingBox(new LatLng(50.723344, -3.595641),10),
+    //LineRef = "1",
 };
 
 BusLocationAPI busLocationAPI = new BusLocationAPI();

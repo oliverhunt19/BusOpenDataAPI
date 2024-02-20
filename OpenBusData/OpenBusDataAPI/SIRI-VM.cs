@@ -1,5 +1,6 @@
 ﻿namespace OpenBusDataAPI
 {
+    [System.Xml.Serialization.XmlRoot("Siri", Namespace = "http://www.siri.org.uk/siri", IsNullable = false)]
     public class SIRI_VM
     {
         public ServiceDelivery ServiceDelivery { get; set; }
@@ -14,7 +15,7 @@
         public VehicleMonitoringDelivery VehicleMonitoringDelivery { get; set; }
     }
 
-    public class VehicleMonitoringDelivery
+    public class VehicleMonitoringDelivery : List<VehicleActivity>
     {
         public DateTime ResponseTimestamp { get; set; }
 
@@ -24,7 +25,6 @@
 
         public string ShortestPossibleCycle { get; set; }
 
-        public VehicleActivity VehicleActivity {get;set;}
     }
 
     public class VehicleActivity
@@ -48,6 +48,8 @@
         public string OriginName { get; set; }
         public string DestinationRef { get; set; }
         public string DestinationName { get; set; }
+
+        public DateTime? OriginAimedDepartureTime { get; set; }
 
         public VehicleLocation VehicleLocation { get; set; }
 
