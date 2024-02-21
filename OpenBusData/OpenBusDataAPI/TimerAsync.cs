@@ -11,7 +11,7 @@
     {
         private readonly Func<CancellationToken, Task> _scheduledAction;
         private readonly TimeSpan _dueTime;
-        private readonly TimeSpan _period;
+        private TimeSpan _period;
         private CancellationTokenSource _cancellationSource;
         private Task _scheduledTask;
         private readonly SemaphoreSlim _semaphore;
@@ -79,6 +79,15 @@
             }
         }
 
+        public void SetPeriod(TimeSpan period)
+        {
+            if (IsRunning)
+            {
+                throw new InvalidOperationException("The timer is running, you must stop it before you can change the time period");
+            }
+            _period = period;
+        }
+
         /// <summary>
         /// Stops the TimerAsync.
         /// </summary>
@@ -115,7 +124,7 @@
                 {
                     await Task.Delay(_dueTime, _cancellationSource.Token).ConfigureAwait(false);
 
-                    while(true)
+                    while(!_cancellationSource.Token.IsCancellationRequested)
                     {
                         if(_canStartNextActionBeforePreviousIsCompleted)
 #pragma warning disable 4014
