@@ -6,22 +6,15 @@ namespace OpenBusDataAPI
 {
     internal class BusLocationAPIEngineSerialiser : HttpEngineSerialiser<BusLocationResponce>
     {
-        public override async ValueTask<BusLocationResponce> DeserializeAsync(Stream rawResponce, CancellationToken cancellationToken)
+        public override ValueTask<BusLocationResponce> DeserializeAsync(Stream rawResponce, CancellationToken cancellationToken)
         {
-            SIRI_VM result;
-            string line = await new StreamReader(rawResponce).ReadToEndAsync().ConfigureAwait(false);
-            rawResponce.Seek(0, SeekOrigin.Begin);  
+            BusLocationResponce result;
             using(XmlReader xmlReader = new XmlTextReader(rawResponce))
             {
-                result = (SIRI_VM) new XmlSerializer(typeof(SIRI_VM)).Deserialize(xmlReader);
+                result = (BusLocationResponce) new XmlSerializer(typeof(BusLocationResponce)).Deserialize(xmlReader);
             }
 
-            BusLocationResponce busLocationResponce = new BusLocationResponce()
-            {
-                ServiceDelivery = result.ServiceDelivery,
-            };
-
-            return busLocationResponce;
+            return ValueTask.FromResult(result);
         }
     }
 }

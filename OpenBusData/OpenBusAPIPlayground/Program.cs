@@ -1,13 +1,14 @@
 ﻿// See https://aka.ms/new-console-template for more information
+using GeneralUtils;
 using OpenBusDataAPI;
+using UnitsNet;
 
 Console.WriteLine("Hello, World!");
 string APIKey = "df3191ca1da34bb25d2072f60067eee9c00e2b22";
 
-BusLocationRequest busLocationRequest = new BusLocationRequest()
+BusLocationRequest busLocationRequest = new BusLocationRequest(APIKey)
 {
-    Key = APIKey,
-    Bounds = LatLngBounds.GetBoundingBox(new LatLng(50.824217, -3.423283),10),
+    Bounds = LatLngBounds.GetBoundingBox(new LatLng(50.824217, -3.423283),Length.FromKilometers(10)),
     LineRef = "1",
 };
 
@@ -21,8 +22,8 @@ async Task RunLocationIdent(CancellationToken cancellationToken)
     Console.WriteLine(resp.ServiceDelivery.VehicleMonitoringDelivery.FirstOrDefault()?.MonitoredVehicleJourney?.VehicleLocation.Longitude);
 }
 
-TimerAsync timerAsync = new TimerAsync(RunLocationIdent,TimeSpan.Zero, TimeSpan.FromSeconds(30));
-timerAsync.Start();
+TimerAsync timerAsync = new TimerAsync(RunLocationIdent,TimeSpan.Zero, TimeSpan.FromSeconds(20));
+await timerAsync.Start();
 Console.ReadLine();
 await timerAsync.Stop();
 Console.WriteLine("Stopped");
