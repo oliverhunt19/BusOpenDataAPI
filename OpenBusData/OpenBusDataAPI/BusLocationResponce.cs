@@ -1,11 +1,10 @@
 ﻿using HttpWebAPICore;
 using HttpWebAPICore.Interfaces;
-using System.Text.Json.Serialization;
 using System.Xml.Serialization;
 
 namespace OpenBusDataAPI
 {
-    [System.Xml.Serialization.XmlRoot("Siri", Namespace = "http://www.siri.org.uk/siri", IsNullable = false)]
+    [XmlRoot("Siri", Namespace = "http://www.siri.org.uk/siri", IsNullable = false)]
     public  class BusLocationResponce : SIRI_VM ,IResponse<BusLocationRequest>
     {
         [XmlIgnore]
@@ -22,7 +21,6 @@ namespace OpenBusDataAPI
 
         [XmlIgnore]
         /// <inheritdoc />
-        [JsonPropertyName("error_message")]
         public virtual string ErrorMessage { get; set; }
 
         [XmlIgnore]
