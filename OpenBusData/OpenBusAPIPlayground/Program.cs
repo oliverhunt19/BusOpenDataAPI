@@ -23,8 +23,8 @@ async Task RunLocationIdent(CancellationToken cancellationToken)
 }
 
 TimerAsync timerAsync = new TimerAsync(RunLocationIdent,TimeSpan.Zero, TimeSpan.FromSeconds(20));
-await timerAsync.Start();
+await timerAsync.StartAsync();
 Console.ReadLine();
-await timerAsync.Stop();
+await timerAsync.StopAsync();
 Console.WriteLine("Stopped");
 Console.ReadLine();
