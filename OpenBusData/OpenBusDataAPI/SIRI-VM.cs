@@ -1,6 +1,8 @@
-﻿namespace OpenBusDataAPI
+﻿using System.Xml.Serialization;
+
+namespace OpenBusDataAPI
 {
-    [System.Xml.Serialization.XmlRoot("Siri", Namespace = "http://www.siri.org.uk/siri", IsNullable = false)]
+    [XmlRoot("Siri", Namespace = "http://www.siri.org.uk/siri", IsNullable = false)]
     public class SIRI_VM
     {
         public ServiceDelivery ServiceDelivery { get; set; }
