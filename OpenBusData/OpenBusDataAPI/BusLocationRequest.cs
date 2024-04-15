@@ -1,6 +1,7 @@
 ﻿using HttpWebAPICore.BaseClasses;
 using HttpWebAPICore.Utilities;
 using RoutePlanning;
+using RoutePlanning.Geometry;
 
 namespace OpenBusDataAPI
 {
