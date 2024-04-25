@@ -58,11 +58,18 @@ namespace OpenBusDataAPI
         public double Bearing { get; set; }
         public string BlockRef { get; set; }
         public string VehicleRef { get; set; }
+
+        public FramedVehicleJourneyRef FramedVehicleJourneyRef { get; set; }
     }
 
     public class VehicleLocation
     {
         public double Latitude { get; set; }
         public double Longitude { get; set; }
+    }
+
+    public class  FramedVehicleJourneyRef
+    {
+        public string DatedVehicleJourneyRef { get; set; }
     }
 }

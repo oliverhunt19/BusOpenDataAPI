@@ -11,6 +11,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\..\GeneralUtils\GeneralUtils\GeneralUtils.csproj" />
     <ProjectReference Include="..\OpenBusDataAPI\OpenBusDataAPI.csproj" />
+    <ProjectReference Include="..\TransXChange.Common\TransXChange.Common.csproj" />
   </ItemGroup>
 
 </Project>
