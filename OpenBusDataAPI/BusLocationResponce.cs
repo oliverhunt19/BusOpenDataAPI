@@ -9,7 +9,7 @@ namespace OpenBusDataAPI
     {
         [XmlIgnore]
         /// <inheritdoc />
-        public virtual string RawJson { get; set; }
+        public virtual string? RawJson { get; set; }
 
         [XmlIgnore]
         /// <inheritdoc />
@@ -21,7 +21,7 @@ namespace OpenBusDataAPI
 
         [XmlIgnore]
         /// <inheritdoc />
-        public virtual string ErrorMessage { get; set; }
+        public virtual string ErrorMessage { get; set; } = "";
 
         [XmlIgnore]
         public BusLocationRequest Request { get; set; }
