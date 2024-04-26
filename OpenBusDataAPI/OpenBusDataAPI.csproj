@@ -9,7 +9,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\..\CoreNavigation\RoutePlanning\RoutePlanning.csproj" />
-    <ProjectReference Include="..\..\..\HttpWebAPICore\HttpWebAPICore\HttpWebAPICore.csproj" />
+    <ProjectReference Include="..\..\..\HttpWebAPICore\HttpWebAPICore\HttpWebAPICore\HttpWebAPICore.csproj" />
   </ItemGroup>
 
 </Project>

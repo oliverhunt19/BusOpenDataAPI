@@ -1,4 +1,6 @@
-﻿using System.Xml.Serialization;
+﻿using RoutePlanning;
+using RoutePlanning.Geometry;
+using System.Xml.Serialization;
 
 namespace OpenBusDataAPI
 {
@@ -42,6 +44,13 @@ namespace OpenBusDataAPI
 
     public class MonitoredVehicleJourney
     {
+        public MonitoredVehicleJourney()
+        {
+            LineRef = string.Empty;
+            DirectionRef = string.Empty;
+            PublishedLineName = string.Empty;
+
+        }
         public string LineRef { get; set; }
         public string DirectionRef { get; set; }
         public string PublishedLineName { get; set; }
@@ -60,9 +69,11 @@ namespace OpenBusDataAPI
         public string VehicleRef { get; set; }
     }
 
-    public class VehicleLocation
+    public class VehicleLocation : ICoordinate
     {
         public double Latitude { get; set; }
         public double Longitude { get; set; }
+
+        public LatLng Coordinates => new LatLng(Latitude, Longitude);
     }
 }
