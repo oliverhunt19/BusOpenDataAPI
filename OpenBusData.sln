@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpenBusDataAPI", "OpenBusDa
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpenBusAPIPlayground", "OpenBusAPIPlayground\OpenBusAPIPlayground.csproj", "{79AC3316-22AE-4063-AE7D-235A77698BF2}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TransXChange.Common", "TransXChange.Common\TransXChange.Common.csproj", "{64AD03B2-877F-4A40-A263-574ED6458CDB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{79AC3316-22AE-4063-AE7D-235A77698BF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{79AC3316-22AE-4063-AE7D-235A77698BF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{79AC3316-22AE-4063-AE7D-235A77698BF2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64AD03B2-877F-4A40-A263-574ED6458CDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64AD03B2-877F-4A40-A263-574ED6458CDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64AD03B2-877F-4A40-A263-574ED6458CDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64AD03B2-877F-4A40-A263-574ED6458CDB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
