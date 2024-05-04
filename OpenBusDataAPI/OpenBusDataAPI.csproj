@@ -23,4 +23,11 @@
 		</Otherwise>
 	</Choose>
 
+ 
+
+	<ItemGroup>
+	  <PackageReference Include="HttpWebAPICore" Version="0.0.3-beta" />
+	  <PackageReference Include="RoutePlanning" Version="0.0.1-alpha" />
+	</ItemGroup>
+
 </Project>
