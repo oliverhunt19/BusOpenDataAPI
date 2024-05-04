@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
@@ -7,6 +7,10 @@
     <Nullable>enable</Nullable>
     <Configurations>Debug;Release;Develop_Debug</Configurations>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="GeneralUtils" Version="0.0.1" />
+  </ItemGroup>
 
 	<ItemGroup>
 		<ProjectReference Include="..\OpenBusDataAPI\OpenBusDataAPI.csproj" />
