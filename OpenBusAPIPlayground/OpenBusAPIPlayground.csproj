@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
@@ -9,9 +9,27 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\GeneralUtils\GeneralUtils\GeneralUtils.csproj" />
-    <ProjectReference Include="..\OpenBusDataAPI\OpenBusDataAPI.csproj" />
-    <ProjectReference Include="..\TransXChange.Common\TransXChange.Common.csproj" />
+    <PackageReference Include="GeneralUtils" Version="0.0.1" />
   </ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\OpenBusDataAPI\OpenBusDataAPI.csproj" />
+		<ProjectReference Include="..\TransXChange.Common\TransXChange.Common.csproj" />
+	</ItemGroup>
+
+	<Choose>
+		<When Condition="'$(Configuration)' == 'Develop_Debug'">
+			<ItemGroup>
+				<ProjectReference Include="..\..\..\GeneralUtils\GeneralUtils\GeneralUtils.csproj" />
+			</ItemGroup>
+		</When>
+		<Otherwise>
+			<ItemGroup>
+				
+				<PackageReference Include="HttpWebAPICore" Version="0.0.3-beta" />
+				<PackageReference Include="RoutePlanning" Version="0.0.1-alpha" />
+			</ItemGroup>
+		</Otherwise>
+	</Choose>
 
 </Project>
