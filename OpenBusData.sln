@@ -3,13 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34316.72
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenBusDataAPI", "OpenBusDataAPI\OpenBusDataAPI.csproj", "{72B588D5-45AC-4DD8-9AF6-45445BB6647D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpenBusDataAPI", "OpenBusDataAPI\OpenBusDataAPI.csproj", "{72B588D5-45AC-4DD8-9AF6-45445BB6647D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HttpWebAPICore", "Submodules\FuelOptimisation\HttpWebAPICore\HttpWebAPICore.csproj", "{4DEFCE58-A0B0-4B60-8950-5C9A5974A78B}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenBusAPIPlayground", "OpenBusAPIPlayground\OpenBusAPIPlayground.csproj", "{79AC3316-22AE-4063-AE7D-235A77698BF2}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RoutePlanning", "Submodules\FuelOptimisation\RoutePlanning\RoutePlanning.csproj", "{F3D96700-FAA8-4D6E-B265-AB1268274956}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpenBusAPIPlayground", "OpenBusAPIPlayground\OpenBusAPIPlayground.csproj", "{79AC3316-22AE-4063-AE7D-235A77698BF2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,18 +17,10 @@ Global
 		{72B588D5-45AC-4DD8-9AF6-45445BB6647D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{72B588D5-45AC-4DD8-9AF6-45445BB6647D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{72B588D5-45AC-4DD8-9AF6-45445BB6647D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4DEFCE58-A0B0-4B60-8950-5C9A5974A78B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4DEFCE58-A0B0-4B60-8950-5C9A5974A78B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4DEFCE58-A0B0-4B60-8950-5C9A5974A78B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4DEFCE58-A0B0-4B60-8950-5C9A5974A78B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{79AC3316-22AE-4063-AE7D-235A77698BF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{79AC3316-22AE-4063-AE7D-235A77698BF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{79AC3316-22AE-4063-AE7D-235A77698BF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{79AC3316-22AE-4063-AE7D-235A77698BF2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F3D96700-FAA8-4D6E-B265-AB1268274956}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F3D96700-FAA8-4D6E-B265-AB1268274956}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F3D96700-FAA8-4D6E-B265-AB1268274956}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F3D96700-FAA8-4D6E-B265-AB1268274956}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
