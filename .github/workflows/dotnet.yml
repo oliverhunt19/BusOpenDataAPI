@@ -22,7 +22,10 @@ jobs:
     - name: Setup .NET
       uses: actions/setup-dotnet@v4
       with:
+        source-url: https://nuget.pkg.github.com/oliverhunt19/index.json
         dotnet-version: 8.0.x
+      env:
+        NUGET_AUTH_TOKEN: ${{secrets.API_KEY}}  # Note, create a secret with this name in Settings
     - name: Restore dependencies
       run: dotnet restore
     - name: Build

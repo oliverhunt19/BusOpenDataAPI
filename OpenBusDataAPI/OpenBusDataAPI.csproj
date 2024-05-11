@@ -14,19 +14,17 @@
 			<ItemGroup>
 				<ProjectReference Include="..\..\..\CoreNavigation\RoutePlanning\RoutePlanning.csproj" />
 				<ProjectReference Include="..\..\..\HttpWebAPICore\HttpWebAPICore\HttpWebAPICore\HttpWebAPICore.csproj" />
+
 			</ItemGroup>
 		</When>
 		<Otherwise>
 			<ItemGroup>
-
+				<PackageReference Include="HttpWebAPICore" Version="0.0.3-beta" />
+				<PackageReference Include="RoutePlanning" Version="0.0.1-alpha" />
 			</ItemGroup>
 		</Otherwise>
 	</Choose>
-
-  
 	
-	<ItemGroup>
-	  <PackageReference Include="HttpWebAPICore" Version="0.0.3-beta" />
-	</ItemGroup>
+
 
 </Project>
