@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
@@ -7,13 +7,13 @@
     <Configurations>Debug;Release;Develop_Debug</Configurations>
   </PropertyGroup>
 
- 
-
+  
+	
 	<Choose>
 		<When Condition="'$(Configuration)' == 'Develop_Debug'">
-			<ItemGroup>
-				<ProjectReference Include="..\..\CoreNavigation\RoutePlanning\RoutePlanning.csproj" />
+		<ItemGroup>
 				<ProjectReference Include="..\..\HttpWebAPICore\HttpWebAPICore\HttpWebAPICore.csproj" />
+				<ProjectReference Include="..\..\CoreNavigation\RoutePlanning\RoutePlanning.csproj" />
 			</ItemGroup>
 		</When>
 		<Otherwise>
@@ -23,10 +23,17 @@
 			</ItemGroup>
 		</Otherwise>
 	</Choose>
+
+  
+	
+	<ItemGroup>
+	  
+	</ItemGroup>
+
+  
+	
+	
 	
 
- 
-
-	
 
 </Project>
