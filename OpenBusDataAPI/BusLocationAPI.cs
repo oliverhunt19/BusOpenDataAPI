@@ -2,7 +2,7 @@
 
 namespace OpenBusDataAPI
 {
-    public class BusLocationAPI : APIBase<BusLocationRequest,BusLocationResponce>
+    public class BusLocationAPI : APIBase<BusLocationRequest,BusLocationResponce>, IBusLocationAPI
     {
         public BusLocationAPI() : base(new BusLocationAPIEngineSerialiser())
         {
